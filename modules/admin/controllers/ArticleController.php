@@ -126,7 +126,7 @@ class ArticleController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-    public function actionSetImage($id)
+    public function actionSetImage()
     {
         $model = new ImageUpLoad;
 
