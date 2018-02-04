@@ -58,6 +58,7 @@ class ArticleController extends Controller
     }
 
     /**
+     * ,e,e,e,e,e,e,e
      * Creates a new Article model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
