@@ -65,6 +65,13 @@ class Article extends \yii\db\ActiveRecord
         ];
     }
 
+
+
+    public function saveImage($filename)
+    {
+        $this->image=$filename;
+        $this->save(false);
+    }
     /**
      * @return \yii\db\ActiveQuery
      */
