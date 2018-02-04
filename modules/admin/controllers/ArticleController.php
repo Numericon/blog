@@ -9,6 +9,7 @@ use app\models\ArticleSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * ArticleController implements the CRUD actions for Article model.
@@ -129,6 +130,12 @@ class ArticleController extends Controller
     public function actionSetImage()
     {
         $model = new ImageUpLoad;
+
+        if(YII::$app->request->isPost)
+        {
+            $file=UploadedFile::getInstance($model,'image');
+            $model->UpLoadImage($file);
+        }
 
         return $this->render('image' ,['model'=>$model]);
     }
